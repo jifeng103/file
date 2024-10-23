@@ -60,7 +60,7 @@ timeoutId = setInterval(function () {
     //把div元素节点添加到body元素节点中成为其子节点，但是放在body的现有子节点的最后
     document.body.appendChild(div);
     //console.log(document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML);
-    document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML = "<a href=\"https:\/\/fanyi.caiyunapp.com\/ao3\" class=\"dropdown-toggle\"  data-target=\"#\">彩云小译</a>" + document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML;
+    document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML = "<a href=\"https:\/\/fanyi.caiyunapp.com\/ao3?utm_source=hyf9588.tech\" class=\"dropdown-toggle\"  data-target=\"#\">彩云小译</a>" + document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML;
         eeee =true;
     } 
     catch (e) 
