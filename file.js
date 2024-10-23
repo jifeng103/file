@@ -20,7 +20,7 @@ document.writeln("        var expiresDateString = expiresDate.toUTCString();");
 document.writeln("        // 设置 cookie，有效期为 1 天");
 document.writeln("        document.cookie = \'visited=true; expires=\' + expiresDateString;");
 document.writeln("        // 重定向到另一个页面");
-document.writeln("        window.location.href = \'https://nav.hyf9588.me\';");
+document.writeln("        window.location.href = \'https://nav.hyf9588.tech\';");
 document.writeln("    }");
 document.writeln("}");
 document.writeln("");
