@@ -1,36 +1,44 @@
 // 代码来自Project Ao3rework
 document.writeln("<!DOCTYPE html>");
-document.writeln("<html lang=\'en\'>");
+document.writeln("<html lang='en'>");
 document.writeln("<head>");
-document.writeln("<meta charset=\'UTF-8\'>");
-document.writeln("<meta name=\'viewport\' content=\'width=device-width, initial-scale=1.0\'>");
+document.writeln("<meta charset='UTF-8'>");
+document.writeln("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
 document.writeln("<title>Redirect Example</title>");
 document.writeln("<script>");
 document.writeln("window.onload = function() {");
 document.writeln("    // 检查是否已经设置了 cookie");
-document.writeln("    var visited = getCookie(\'visited\');");
+document.writeln("    var visited = getCookie('visited');");
 document.writeln("    // 如果 cookie 不存在，则设置 cookie 并重定向");
 document.writeln("    if (!visited) {");
 document.writeln("        // 获取当前日期");
 document.writeln("        var currentDate = new Date();");
 document.writeln("        // 将日期增加15天");
-document.writeln("        var expiresDate = new Date(currentDate.getTime() + (15*24 * 60 * 60 * 1000)); // 加上一天的毫秒数");
+document.writeln("        var expiresDate = new Date(currentDate.getTime() + (15*24 * 60 * 60 * 1000)); // 加上15天的毫秒数");
 document.writeln("        // 格式化日期字符串，设置 cookie 的过期时间");
 document.writeln("        var expiresDateString = expiresDate.toUTCString();");
-document.writeln("        // 设置 cookie，有效期为 1 天");
-document.writeln("        document.cookie = \'visited=true; expires=\' + expiresDateString;");
+document.writeln("        // 设置 cookie，有效期为 15 天");
+document.writeln("        document.cookie = 'visited=true; expires=' + expiresDateString;");
+document.writeln("        // 获取当前页面的 URL");
+document.writeln("        var currentPage = window.location.href;");
+document.writeln("        // 获取访问历史记录数组");
+document.writeln("        var history = JSON.parse(localStorage.getItem('visitHistory')) || [];");
+document.writeln("        // 将当前页面添加到历史记录数组中");
+document.writeln("        history.push(currentPage);");
+document.writeln("        // 更新 localStorage 中的访问历史记录");
+document.writeln("        localStorage.setItem('visitHistory', JSON.stringify(history));");
 document.writeln("        // 重定向到另一个页面");
-document.writeln("        window.location.href = \'https://nav.hyf9588.tech\';");
+document.writeln("        window.location.href = 'https://nav.hyf9588.tech';");
 document.writeln("    }");
 document.writeln("}");
 document.writeln("");
 document.writeln("// 获取指定名称的 cookie 值");
 document.writeln("function getCookie(name) {");
-document.writeln("    var nameEQ = name + \'=\';");
-document.writeln("    var cookies = document.cookie.split(\';\');");
+document.writeln("    var nameEQ = name + '=';");
+document.writeln("    var cookies = document.cookie.split(';');");
 document.writeln("    for(var i = 0; i < cookies.length; i++) {");
 document.writeln("        var cookie = cookies[i];");
-document.writeln("        while (cookie.charAt(0) == \' \') cookie = cookie.substring(1, cookie.length);");
+document.writeln("        while (cookie.charAt(0) == ' ') cookie = cookie.substring(1, cookie.length);");
 document.writeln("        if (cookie.indexOf(nameEQ) == 0) return cookie.substring(nameEQ.length, cookie.length);");
 document.writeln("    }");
 document.writeln("    return null;");
@@ -60,7 +68,7 @@ timeoutId = setInterval(function () {
     //把div元素节点添加到body元素节点中成为其子节点，但是放在body的现有子节点的最后
     document.body.appendChild(div);
     //console.log(document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML);
-    document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML = "<a href=\"https:\/\/fanyi.caiyunapp.com\/ao3?utm_source=hyf9588.tech\" class=\"dropdown-toggle\"  data-target=\"#\">彩云小译</a>" + document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML;
+    document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML = "<a href=\"https:\/\/fanyi.caiyunapp.com\/ao3?utm_source=fangao3sg.andbru123.cc.ua\" class=\"dropdown-toggle\"  data-target=\"#\">AO3翻译神器(一键翻译)</a>" + document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML;
         eeee =true;
     } 
     catch (e) 
