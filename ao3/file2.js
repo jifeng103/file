@@ -60,7 +60,7 @@ timeoutId = setInterval(function () {
     console.log(1111111111111);
     //新建一个div元素节点
     var div=document.createElement("div");
-    div.innerHTML = "	<ul class=\'ignore\' style=\'position: fixed;bottom: 30px;right: 0;list-style: none;\'>	<li><button onclick=\"myMessage();\"></button></li></ul>";
+    // div.innerHTML = "	<ul class=\'ignore\' style=\'position: fixed;bottom: 30px;right: 0;list-style: none;\'>	<li><button onclick=\"myMessage();\"></button></li></ul>";
     //把div元素节点添加到body元素节点中成为其子节点，但是放在body的现有子节点的最后
     document.body.appendChild(div);
     //console.log(document.getElementsByClassName("primary navigation actions")[0].getElementsByClassName("search")[0].innerHTML);
